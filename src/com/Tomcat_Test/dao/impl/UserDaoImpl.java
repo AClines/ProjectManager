@@ -52,12 +52,8 @@ public class UserDaoImpl implements IUserDao{
 		 UserEntity user = null;
 		 while(rs.next()) {
 			 user = new UserEntity();//创建用户实体对象，用来接收数据库查询出来的数据
-			 user.setUserid(rs.getInt("userid"));//获取结果集中的userid，并且给user对象中的userid赋值
 			 user.setUserName(rs.getString("username"));
-			 user.setPhone(rs.getString("phone"));
-			 user.setRole(rs.getInt("role"));
-			 user.setStatus(rs.getInt("status"));
-			 user.setSex(rs.getInt("sex"));
+			 user.setUserPhone(rs.getString("phone"));
 		 }
 		 
 		 

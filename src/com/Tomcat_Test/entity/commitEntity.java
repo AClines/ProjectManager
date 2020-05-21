@@ -1,4 +1,4 @@
-package SqlEntity;
+package com.Tomcat_Test.entity;
 
 public class commitEntity {
 	public int commitNum;//主键,提交编号,自动生成编号

@@ -1,4 +1,4 @@
-package SqlEntity;
+package com.Tomcat_Test.entity;
 
 public class TeamEntity {
 	public int teamNum;//主键,团队编号,自动生成编号

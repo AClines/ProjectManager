@@ -1,12 +1,12 @@
-package SqlEntity;
+package com.Tomcat_Test.entity;
 
-public class userEntity {
+public class UserEntity {
 	public int userNum;//用户编号，主键，自动生成值
 	public int teamNum;//团队编号，外键，依赖team表
 	public String userName;//用户姓名
 	public int userAccount;//用户账号
 	public String userPassword;//用户密码
-	public int userPhone;//用户手机号
+	public String userPhone;//用户手机号
 	public String userInformation;//个人简介
 	public String userSex;//性别
 	public String userEmail;//邮箱
@@ -42,10 +42,10 @@ public class userEntity {
 	public void setUserPassword(String userPassword) {
 		this.userPassword = userPassword;
 	}
-	public int getUserPhone() {
+	public String getUserPhone() {
 		return userPhone;
 	}
-	public void setUserPhone(int userPhone) {
+	public void setUserPhone(String userPhone) {
 		this.userPhone = userPhone;
 	}
 	public String getUserInformation() {

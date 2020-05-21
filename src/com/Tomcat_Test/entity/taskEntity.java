@@ -1,4 +1,4 @@
-package SqlEntity;
+package com.Tomcat_Test.entity;
 
 public class taskEntity {
 	public int taskNum;//主键，任务编号，自动生成编号

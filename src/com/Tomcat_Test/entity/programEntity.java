@@ -1,4 +1,4 @@
-package SqlEntity;
+package com.Tomcat_Test.entity;
 
 public class programEntity {
 	public int programNum;//项目编号，主键，自动生成
