@@ -1,30 +1,28 @@
-package com.Tomcat_Test.entity;
+package SqlEntity;
 
-import com.sun.jmx.snmp.Timestamp;
-
-public class UserEntity {
-
-	private int userid;
-	private String userName;
-	private String email;
-	private String password;
-	private int role;
-	private int status;
-	private int sex;
-	private String phone;
-	private Timestamp registtime;
-	private String faceurl;
-	@Override
-	public String toString() {
-		return "UserEntity [userid=" + userid + ", userName=" + userName + ", email=" + email + ", password=" + password
-				+ ", role=" + role + ", status=" + status + ", sex=" + sex + ", phone=" + phone + ", registtime="
-				+ registtime + ", faceurl=" + faceurl + "]";
+public class userEntity {
+	public int userNum;//用户编号，主键，自动生成值
+	public int teamNum;//团队编号，外键，依赖team表
+	public String userName;//用户姓名
+	public int userAccount;//用户账号
+	public String userPassword;//用户密码
+	public int userPhone;//用户手机号
+	public String userInformation;//个人简介
+	public String userSex;//性别
+	public String userEmail;//邮箱
+	
+	//get和set方法
+	public int getUserNum() {
+		return userNum;
 	}
-	public int getUserid() {
-		return userid;
+	public void setUserNum(int userNum) {
+		this.userNum = userNum;
 	}
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public int getTeamNum() {
+		return teamNum;
+	}
+	public void setTeamNum(int teamNum) {
+		this.teamNum = teamNum;
 	}
 	public String getUserName() {
 		return userName;
@@ -32,52 +30,51 @@ public class UserEntity {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getEmail() {
-		return email;
+	public int getUserAccount() {
+		return userAccount;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUserAccount(int userAccount) {
+		this.userAccount = userAccount;
 	}
-	public String getPassword() {
-		return password;
+	public String getUserPassword() {
+		return userPassword;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
-	public int getRole() {
-		return role;
+	public int getUserPhone() {
+		return userPhone;
 	}
-	public void setRole(int role) {
-		this.role = role;
+	public void setUserPhone(int userPhone) {
+		this.userPhone = userPhone;
 	}
-	public int getStatus() {
-		return status;
+	public String getUserInformation() {
+		return userInformation;
 	}
-	public void setStatus(int status) {
-		this.status = status;
+	public void setUserInformation(String userInformation) {
+		this.userInformation = userInformation;
 	}
-	public int getSex() {
-		return sex;
+	public String getUserSex() {
+		return userSex;
 	}
-	public void setSex(int sex) {
-		this.sex = sex;
+	public void setUserSex(String userSex) {
+		this.userSex = userSex;
 	}
-	public String getPhone() {
-		return phone;
+	public String getUserEmail() {
+		return userEmail;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
 	}
-	public Timestamp getRegisttime() {
-		return registtime;
+	
+	//toString方法
+	@Override
+	public String toString() {
+		return "userEntity [userNum=" + userNum + ", teamNum=" + teamNum + ", userName=" + userName + ", userAccount="
+				+ userAccount + ", userPassword=" + userPassword + ", userPhone=" + userPhone + ", userInformation="
+				+ userInformation + ", userSex=" + userSex + ", userEmail=" + userEmail + "]";
 	}
-	public void setRegisttime(Timestamp registtime) {
-		this.registtime = registtime;
-	}
-	public String getFaceurl() {
-		return faceurl;
-	}
-	public void setFaceurl(String faceurl) {
-		this.faceurl = faceurl;
-	}
+	
+	
+	
 }
