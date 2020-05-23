@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-aaaa
+<div class="form_input">
+	<form action="${pageContext.request.contextPath}/LoginSvl" method="post">
+		<input type="text" name="userAccount" class="userAccount_input" placeholder="请输入账号">
+		<input type="text" name="userPassword" class="userPassword_input" placeholder="请输入密码">
+		<input type="submit" value="登录" class="input_login">
+		<font>${msg}</font>
+	</form>
+	</div>
 </body>
 </html>

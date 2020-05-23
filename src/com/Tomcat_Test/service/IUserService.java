@@ -5,6 +5,6 @@ import com.Tomcat_Test.entity.UserEntity;
 //用户逻辑接口
 public interface IUserService {
 
-	UserEntity Login(String userName, String password);
+	public UserEntity Login(int userAccount, String userPassword);
 
 }

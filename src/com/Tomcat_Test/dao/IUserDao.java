@@ -6,6 +6,7 @@ import com.Tomcat_Test.entity.UserEntity;
 
 public interface IUserDao {
 
-	UserEntity login(String userName, String password) throws ClassNotFoundException, SQLException;
+	public UserEntity login(int userAccount, String userPassword) throws Exception;
+	public UserEntity find(String name)throws Exception;//≤È—Ø–’√˚
 
 }
