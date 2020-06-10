@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+
+*{word-wrap:break-word}
+body{ overflow-x: hidden; overflow-y: auto; }
+/* CSS Document */
+div,address,b,big,blockquote,body,center,cite,code,dd,del,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,label,legend,li,ol,p,pre,small,span,strong,u,ul,var,th,td,input {
+	margin: 0;padding: 0;}
+div,dl,dt,dd,form,input,button,textarea,p,ul,li,ol,table,tr,td,header,footer,aside,nav,h1,h2,h3,h4,h5,h6,section{
+	box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+body{font:16px "微软雅黑","Arial Narrow",HELVETICA;}
+/*字体*/
+a{text-decoration:none;color:#FFFFFF;cursor: pointer}
+a.ie6:hover{zoom:1}
+a:focus{outline:none}
+a:hover{text-decoration: none;}
+i,em{font-style:normal;}
+b,strong{font-weight:100;}
+sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
+sup{top:-0.5em}sub{bottom:-0.25em}
+h1,h2,h3,h4,h5,h6,strong{font-weight:normal}
+/*列表 表单*/
+ul,ol{list-style:none;}
+img{border:none !important;vertical-align:middle}
+input{outline:none;}
+input[type="button"], input[type="submit"], input[type="reset"],button,select {-webkit-appearance: none;outline:none;}
+textarea {-webkit-appearance: none;outline:none}
+/*IE下a:hover 背景闪烁*/
+*html{overflow:-moz-scrollbars-vertical;zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}(this))}
+.clear:after{content:'';display: block;clear:both;}
+/*布局宽度*/
+.w{width: 1200px;margin: 0 auto;}
+body,html{min-width: 1200px;}
+/*默认链接颜色*/
+a{color: #333;}
+a:focus {outline:0 !important; }
+/** 基础布局  清除空隙  需在外层容器加上 dib-box，dib 可单独使用*/
+.dib-box { font-size: 0; /* 所有浏览器 */ *word-spacing: -1px; /* IE6/7 */ }
+@media (-webkit-min-device-pixel-ratio: 0) { .dib-box { letter-spacing: -5px; /* Safari 5- 等不支持 font-size: 0 的浏览器 */ } }
+.dib-box .dib {vertical-align: top;font-size: 14px;letter-spacing: normal;word-spacing: normal;line-height: inherit;}
+.dib{display: inline-block; *display: inline; *zoom: 1; }
+/*自适应两端对齐组件 外层加上 justify，内部需要两端对齐的元素都加上 dib,dib 与 justify 不要同时出现*/
+/*防止行高增大  尽量不要在父元素上设置行高*/
+.justify, .dib-box .justify { font-size: 0; line-height: inherit; }
+.justify {text-align: justify;text-justify: inter-ideograph; /* IE 6-7 */ *zoom: 1; /* IE 6-7 触发 hasLayout 使一行也能两端对齐 */-moz-text-align-last: justify;text-align-last: justify; /* IE 8+ */}
+/*** 不支持 text-align-last 的浏览器用伪元素模拟* 1. margin-left:100% 仅 WebKit 支持*/
+.justify:after { content: ""; display: inline-block; width: 100%; /* 1 */ }
+/* 子元素取消两端对齐 */
+.justify .dib {-moz-text-align-last: auto;text-align-last: auto;text-justify: auto;text-align: left;font-size: 12px;letter-spacing: normal;word-spacing: normal;}
+/* 常用样式 */
+input:focus{ outline:none; }
+select:focus{ outline:none; }
+.bz{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.oh{overflow: hidden}
+.db{display:block;}
+.bb{box-sizing: border-box;}
+.dib{display: inline-block;}
+
+/* 弹性盒子 */
+.fbox {display: flex;}
+.wrap {flex-wrap: wrap;}
+.fbox-inline {display: inline-flex;}
+.fbox-column {flex-direction: column}
+.fg0,.fg1,.fg2,.fg3,.fg4,.fg5,.fg6,.fg7,.fg8,.fg9{width: 1px}
+.fg1 {flex-grow: 1}
+.fg2 {flex-grow: 2}
+.fg3 {flex-grow: 3}
+.fg4 {flex-grow: 4}
+.fg5 {flex-grow: 5}
+.fg6 {flex-grow: 6}
+.fg7 {flex-grow: 7}
+.fg8 {flex-grow: 8}
+.fg9 {flex-grow: 9}
+.fbox-atop {align-items: flex-start;}
+.fbox-acenter {align-items: center;}
+.fbox-abottom {align-items: flex-end;}
+.fbox-astretch {align-items: stretch;}
+.fbox-jaround {justify-content: space-around;}
+.fbox-jbetween {justify-content: space-between;}
+.fbox-jcenter {justify-content: center;}
+
+.fsh{flex-shrink: 0;}
+.fl{float:left;}
+.fr{float:right;}
+.clearfix:after{content: '\0020'; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix{*zoom: 1; }
+/*字体样式*/
+.tl{text-align:left !important;}
+.tc{text-align:center !important;}
+.tr{text-align:right !important;}
+.ell{overflow:hidden;word-wrap:normal;white-space:nowrap;text-overflow:ellipsis;}
+.ell_1{ overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1;-webkit-box-orient: vertical;}
+.ell_2{ overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+.ell_3{ overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3;-webkit-box-orient: vertical;}
+.ell_4{ overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4;-webkit-box-orient: vertical;}
+.f14{font-size: 14px;}
+.f16{font-size: 16px;}
+.f18{font-size: 18px;}
+.f20{font-size: 20px;}
+.f22{font-size: 22px;}
+.f24{font-size: 24px;}
+.f25{font-size: 25px;}
+.f26{font-size: 26px;}
+.f28{font-size: 28px;}
+.f12{font-size: 12px;}
+.f14{font-size: 14px;}
+.fbold{font-weight: bold;}
+/*常用颜色*/
+.c6{color: #666666;}
+.c3{color: #333333;}
+.c9{color: #999999;}
+.color-hui{color: #a9b1b6;}
+.color-o{color: rgb(255, 111, 0);}
+.color3{color: #333;}
+.color-hei{color: #2e3541;}
+.color-gray{color: #666;}
+.color80{color: #808080;}
+.color-lightgray{color: #999;}
+.color-white{color: #FFFFFF;}
+.bg-white{background-color: #fff;}
+/*常用浮动*/
+.mt{margin-top: 20px;}
+.ml{margin-left: 20px;}
+.mr{margin-right: 20px;}
+.mb{margin-bottom: 20px;}
+.ml30{margin-left: 30px;}
+.mt30{margin-top: 30px;}
+.ml40{margin-left: 40px;}
+
+.pt{padding-top: 20px}
+.pb{padding-bottom:  20px}
+
+/* 下划线 */
+.bor-btm{
+	border-bottom: 1px solid none;
+}
+
+/* 向下的三角 */
+.jiao-bot{
+	position: relative;
+}
+.jiao-bot::after{
+	content: "";
+	 width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #999999;
+	position:absolute;
+	top:50%;
+	margin-top: -2.5px;
+	margin-left: 5px;
+	/* left:0px; */
+}

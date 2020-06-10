@@ -1,0 +1,114 @@
+._projectItem{
+	background-color: #f5f5f5;
+	padding: 0px;
+	border: 3px solid #909090;
+	margin: 15px;
+}
+
+
+.box{
+	width: 100vw;
+	height: 100vh;
+}
+.left{
+	width: 150px;
+	background-color: #31364d;
+}
+.left img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+.left div{
+	width: 100%;
+	color: #FFFFFF;
+	margin: 50px 0;
+	cursor: pointer;
+}
+.left p{
+	color: #FFFFFF;
+	line-height: 30px;
+}
+.right{
+	padding: 0px;
+	height: 90vh;
+	
+}
+.item{
+	width: 100%;
+	background-color: #FFFFFF;
+	padding: 30px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+.title{
+	line-height: 50px;
+	border-bottom: 1px solid #DDDDDD;
+}
+.con{
+	padding: 20px 0px 0;
+	box-sizing: border-box;
+}
+.con h2{
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+.add{
+	cursor: pointer;
+}
+
+
+
+.tijiao a{
+	display: inline-block;
+	width: 100px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fabu{
+	margin-top: 100px !important;
+	border: 1px solid #000000;
+	padding: 20px;
+	box-sizing: border-box;
+	
+}
+
+.top{
+	padding: 60px 20px;
+	box-sizing: border-box;
+}
+input{
+	display: block;
+	height: 30px;
+	margin: 10px 0;
+	width: 700px;
+}
+.zuo{
+	border: 1px solid #000000;
+	padding: 0 30px;
+}
+.you div,.kuang{
+	cursor: pointer;
+	border: 1px solid #000000;
+	line-height: 30px;
+	width: 150px;
+	text-align: center;
+	margin: 10px 0;
+	
+}
