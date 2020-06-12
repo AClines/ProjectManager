@@ -1,14 +1,17 @@
 package com.Tomcat_Test.entity;
 
 public class programEntity {
-	public int programNum;//ÏîÄ¿±àºÅ£¬Ö÷¼ü£¬×Ô¶¯Éú³É
-	public int teamNum;//ÍÅ¶Ó±àºÅ£¬Íâ¼ü£¬ÒÀÀµteam±í
-	public String programName;//ÍÅ¶ÓÃû³Æ
-	public String programStartTime;//ÆðÊ¼Ê±¼ä
-	public String programEndTime;//½ØÖ¹Ê±¼ä
-	public String programRate;//ÏîÄ¿½ø¶È
+	public int programNum;//ï¿½ï¿½Ä¿ï¿½ï¿½Å£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½
+	public int teamNum;
+	public String programName;//ï¿½Å¶ï¿½ï¿½ï¿½ï¿½ï¿½
+	public String programStartTime;
+	public String programEndTime;//ï¿½ï¿½Ö¹Ê±ï¿½ï¿½
+	public String programRate;//ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½
+	public String programInformation;
+		
 	
-	//getºÍset·½·¨
+	
+	//getï¿½ï¿½setï¿½ï¿½ï¿½ï¿½
 	public int getProgramNum() {
 		return programNum;
 	}
@@ -46,12 +49,20 @@ public class programEntity {
 		this.programRate = programRate;
 	}
 	
-	//toString·½·¨
+	public String getProgramInformation() {
+		return programInformation;
+	}
+	public void setProgramInformation(String programInformation) {
+		this.programInformation = programInformation;
+	}
+	//toStringï¿½ï¿½ï¿½ï¿½
 	@Override
 	public String toString() {
 		return "programEntity [programNum=" + programNum + ", teamNum=" + teamNum + ", programName=" + programName
 				+ ", programStartTime=" + programStartTime + ", programEndTime=" + programEndTime + ", programRate="
-				+ programRate + "]";
+				+ programRate + ", programInformation=" + programInformation + "]";
 	}
+	
+	
 	
 }

@@ -11,12 +11,15 @@ public class ICommitServiceImpl implements ICommitService {
 	@Override
 	public boolean commit(int userNum, String commitName) {
 		boolean flag = false;
-		try {
-			flag = dao.commit(userNum,commitName);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+			try {
+				flag = dao.commit(userNum,commitName);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		
 		return flag;
 	}
 	
