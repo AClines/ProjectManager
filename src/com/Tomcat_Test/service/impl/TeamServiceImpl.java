@@ -8,11 +8,11 @@ public class TeamServiceImpl implements TeamService{
     
 	TeamDao dao=new TeamDaoImpl();
 	@Override
-	public boolean sumbit(String teaminformation) {
+	public boolean sumbit(String teaminformation,int projectId,int userId) {
 		// TODO Auto-generated method stub
 		boolean flag=false;
 		try {
-			flag=dao.sumbit(teaminformation);
+			flag=dao.sumbit(teaminformation,projectId,userId);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

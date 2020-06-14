@@ -4,12 +4,21 @@ public class taskEntity {
 	public int taskNum;//主键，任务编号，自动生成编号
 	public int programNum;//外键，项目编号，依赖program表
 	public int userNum;//外键，用户编号，依赖user表
+	public String taskUserName;//外键，用户，依赖user表
 	public String taskName;//任务名称
 	public String taskStartTime;//任务起始时间
 	public String taskEndTime;//任务截止时间
 	public String taskRate;//任务进度
 	public int taskLevel;//任务级别
 	//get和set方法
+	
+	public String getTaskUserName() {
+		return taskUserName;
+	}
+	public void setTaskUserName(String taskUserName) {
+		this.taskUserName = taskUserName;
+	}
+	
 	public int getTaskNum() {
 		return taskNum;
 	}

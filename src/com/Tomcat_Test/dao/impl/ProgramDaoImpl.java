@@ -12,17 +12,17 @@ import cmo.Tomcat_Test.utils.DBUtils;
 public class ProgramDaoImpl extends DBUtils implements ProgramDao {
   
 	@Override
-	public boolean sumbit(String programname, String programinformation) throws Exception {
+	public boolean sumbit(String programname, String programinformation,int userId) throws Exception {
 		if(this.isSumbit(programname)) {
 			openConnection();
 			// 写sql
-			String sql = "insert into program(programname,programinformation) values(?,?)";
+			String sql = "insert into program(programName,programInfomation,userNum) values(?,?,?)";
 
 			// 创建执行sql的语句Statement,如果sql有占位符，调用setXXX方法
 			PreparedStatement pst = conn.prepareStatement(sql);
 			pst.setString(1, programname);
 			pst.setString(2, programinformation);
-			
+			pst.setInt(3, userId);
 			
 			int line = pst.executeUpdate();
 			closeConnection();
@@ -42,7 +42,7 @@ public class ProgramDaoImpl extends DBUtils implements ProgramDao {
 	
 	public programEntity find(String programname) throws Exception {
 		
-	
+		
 	openConnection();
 
 	String sql="select * from program where programName = ?";

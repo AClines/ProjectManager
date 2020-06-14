@@ -15,16 +15,18 @@ public class CommitDaoImpl extends DBUtils implements ICommitDao {
 
 	// 连接数据库
 	@Override
-	public boolean commit(int userNum, String commitName) throws Exception {
+	public boolean commit(int userNum, String commitName,int taskId, int projectId) throws Exception {
 
 		openConnection();
 		// 写sql
-		String sql = "insert into commit(userNum,commitName) values(?,?)";
+		String sql = "insert into commit(userNum,commitName,taskNum,programNum) values(?,?,?,?)";
 
 		// 创建执行sql的语句Statement,如果sql有占位符，调用setXXX方法
 		PreparedStatement pst = conn.prepareStatement(sql);
 		pst.setInt(1, userNum);
 		pst.setString(2, commitName);
+		pst.setInt(3, taskId);
+		pst.setInt(4, projectId);
 		int line = pst.executeUpdate();
 		
 		closeConnection();

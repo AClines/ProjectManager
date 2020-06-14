@@ -30,7 +30,6 @@ public class LoginSvl extends HttpServlet {
 		int userAccount = Integer.parseInt(request.getParameter("userAccount"));//该方法参数里放的是html页面input里的元素的名字
 		String userPassword = request.getParameter("userPassword");//该方法参数里放的是html页面input里的元素的名字
 		System.out.println(userAccount+"  "+userPassword);
-		
 		//2.创建对象，调用方法
 		IUserService userService = new UserServiceImpl();
 		UserEntity user = userService.Login(userAccount,userPassword);
@@ -44,11 +43,8 @@ public class LoginSvl extends HttpServlet {
 			//把user信息保存到session会话中
 			HttpSession session =request.getSession();
 			session.setAttribute("user", user);//浏览器不关闭，信息就有效
-			
-			
 			//登录成功
-			url="TestWelcome.jsp";//
-			
+			url="index.jsp";//
 			flag=true;
 			
 		}

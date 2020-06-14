@@ -31,12 +31,14 @@ private static final long serialVersionUID = 1L;
          System.out.println(programname+"  "+programinformation);
        //鍒涘缓ProgramServiceImpl瀵硅薄锛岃皟鐢ㄦ柟娉曪紝寰楀埌杩斿洖鍊�
          ProgramService service=new ProgramServiceImpl();
+         
+         int userId = ((UserEntity)request.getSession().getAttribute("user")).getUserNum();
         //鏈夋病鏈夊弬鏁�  鏈夋病鏈夎繑鍥炲��
-         boolean flag = service.sumbit(programname, programinformation);
+         boolean flag = service.sumbit(programname, programinformation,userId);
 			String url = "";
 			String msg = "";
 			if (flag) {
-				url = "Findprogram.jsp";// 登录成功后跳转的地址;
+				url = "my.jsp";// 登录成功后跳转的地址;
 				msg = "登记成功";// 要显示的信息
 			} else {
 				url = "Findprogram.jsp";

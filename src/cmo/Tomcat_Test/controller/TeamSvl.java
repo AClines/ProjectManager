@@ -27,12 +27,16 @@ public class TeamSvl extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 String teaminformation=request.getParameter("teamInformation");
+		 String teaminformation=request.getParameter("taskName");
+		 int userId=Integer.parseInt(request.getParameter("userId"));
 	        System.out.println(teaminformation);
+	     // 1.接收页面参数 goodsid   Integer.parseInt(String value)  把String类型转成int的包装类
+	        int projectId = Integer.parseInt(request.getParameter("projectId")) ;
+	        
 	      //鍒涘缓ProgramServiceImpl瀵硅薄锛岃皟鐢ㄦ柟娉曪紝寰楀埌杩斿洖鍊�
 	        TeamService service=new TeamServiceImpl();
 	       //鏈夋病鏈夊弬鏁�  鏈夋病鏈夎繑鍥炲��
-	        boolean flag = service.sumbit(teaminformation);
+	        boolean flag = service.sumbit(teaminformation,projectId,userId);
 				String url = "";
 				String msg = "";
 				if (flag) {

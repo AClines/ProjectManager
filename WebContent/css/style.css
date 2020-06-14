@@ -8,10 +8,10 @@
 
 .box{
 	width: 100vw;
-	height: 100vh;
 }
 .left{
 	width: 150px;
+	height:1080px;
 	background-color: #31364d;
 }
 .left img{
@@ -32,8 +32,7 @@
 	line-height: 30px;
 }
 .right{
-	padding: 0px;
-	height: 90vh;
+	height: 120vh;
 	
 }
 .item{

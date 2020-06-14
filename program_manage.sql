@@ -1,15 +1,12 @@
 /*
 Navicat MySQL Data Transfer
-
 Source Server         : Project
 Source Server Version : 50717
 Source Host           : localhost:3306
 Source Database       : program_manage
-
 Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
-
 Date: 2020-06-09 18:01:20
 */
 
@@ -24,6 +21,8 @@ CREATE TABLE `commit` (
   `commitName` char(20) DEFAULT NULL,
   `commitTime` date DEFAULT NULL,
   `userNum` int(11) DEFAULT NULL,
+`programNum` int(11) DEFAULT NULL,
+`taskNum` int(11) DEFAULT NULL,
   PRIMARY KEY (`commitNum`),
   KEY `FK_Reference_01` (`userNum`),
   CONSTRAINT `FK_Reference_01` FOREIGN KEY (`userNum`) REFERENCES `user` (`userNum`)
@@ -43,6 +42,7 @@ DROP TABLE IF EXISTS `program`;
 CREATE TABLE `program` (
   `programNum` int(11) NOT NULL AUTO_INCREMENT,
   `teamNum` int(11) DEFAULT NULL,
+  `userNum` int(11) DEFAULT NULL,
   `programName` char(20) DEFAULT NULL,
   `programStartTime` date DEFAULT NULL,
   `programEndTime` date DEFAULT NULL,

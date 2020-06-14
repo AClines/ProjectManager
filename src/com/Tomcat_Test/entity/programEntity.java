@@ -1,17 +1,19 @@
 package com.Tomcat_Test.entity;
 
 public class programEntity {
-	public int programNum;//��Ŀ��ţ��������Զ�����
+	public int programNum;//锟斤拷目锟斤拷牛锟斤拷锟斤拷锟斤拷锟斤拷远锟斤拷锟斤拷锟�
 	public int teamNum;
-	public String programName;//�Ŷ�����
+	public String programName;//锟脚讹拷锟斤拷锟斤拷
 	public String programStartTime;
-	public String programEndTime;//��ֹʱ��
-	public String programRate;//��Ŀ����
+	public String programEndTime;//锟斤拷止时锟斤拷
+	public String programRate;//锟斤拷目锟斤拷锟斤拷
 	public String programInformation;
 		
 	
 	
-	//get��set����
+	//get锟斤拷set锟斤拷锟斤拷
+	
+	
 	public int getProgramNum() {
 		return programNum;
 	}
@@ -55,7 +57,7 @@ public class programEntity {
 	public void setProgramInformation(String programInformation) {
 		this.programInformation = programInformation;
 	}
-	//toString����
+	//toString锟斤拷锟斤拷
 	@Override
 	public String toString() {
 		return "programEntity [programNum=" + programNum + ", teamNum=" + teamNum + ", programName=" + programName

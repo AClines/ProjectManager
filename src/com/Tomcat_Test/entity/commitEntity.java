@@ -5,6 +5,20 @@ public class commitEntity {
 	public int userNum;//外键,用户编号,依赖user表
 	public String commitName;//提交名称
 	public String commitTime;//提交时间
+	public int programNum;//所属项目ID
+	public int taskNum;//所属任务ID
+	public int getProgramNum() {
+		return programNum;
+	}
+	public void setProgramNum(int projectId) {
+		this.programNum = projectId;
+	}
+	public int getTaskNum() {
+		return taskNum;
+	}
+	public void setTaskNum(int taskId) {
+		this.taskNum = taskId;
+	}
 	//get和set方法
 	public int getCommitNum() {
 		return commitNum;

@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.Tomcat_Test.entity.UserEntity;
 import com.Tomcat_Test.entity.commitEntity;
+import com.Tomcat_Test.service.ICommitService;
 import com.Tomcat_Test.service.impl.ICommitServiceImpl;
 
 /**
@@ -26,13 +28,16 @@ public class CommitSvl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 1.接收页面参数
-		int userNum = Integer.parseInt(request.getParameter("userNum"));// 用户编号
+		int userNum = ((UserEntity)request.getSession().getAttribute("user")).getUserNum();// 用户编号
 		String commitName = request.getParameter("commitName");// 提交名称
-		System.out.println(userNum + "  " + commitName);
+		
+		int projectId = Integer.parseInt(request.getParameter("projectId"));
+		int taskId = Integer.parseInt(request.getParameter("taskId"));
+		System.out.println(taskId);
 
 		// 2.创建CommitServiceImpl对象,调用方法，得到返回值
-		ICommitServiceImpl service = new ICommitServiceImpl();
-		boolean flag = service.commit(userNum, commitName);
+		ICommitService service = new ICommitServiceImpl();
+		boolean flag = service.commit(userNum,commitName,taskId,projectId);
 		String url = "";
 		String msg = "";
 		if (flag) {

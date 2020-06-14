@@ -12,8 +12,8 @@
 <div class="programlist">
 <ul>
 <c:forEach items="${programEntities}" var="p"> 
-   <li><a>${c.programName}</a>
-   <a>${c.programInformation}</a></li>
+   <li><a>${p.programName}</a>
+   <a>${p.programInformation}</a></li>
 </c:forEach>
 </ul>
 </div>

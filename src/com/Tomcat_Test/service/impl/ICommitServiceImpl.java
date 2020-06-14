@@ -9,11 +9,11 @@ public class ICommitServiceImpl implements ICommitService {
 	CommitDaoImpl dao=new CommitDaoImpl();
 	
 	@Override
-	public boolean commit(int userNum, String commitName) {
+	public boolean commit(int userNum, String commitName,int taskId, int projectId) {
 		boolean flag = false;
 
 			try {
-				flag = dao.commit(userNum,commitName);
+				flag = dao.commit(userNum,commitName,taskId,projectId);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

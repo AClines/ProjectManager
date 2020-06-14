@@ -9,15 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.Tomcat_Test.entity.UserEntity;
+import com.Tomcat_Test.entity.commitEntity;
 import com.Tomcat_Test.entity.programEntity;
-import com.Tomcat_Test.service.FindprogramService;
 import com.Tomcat_Test.service.FindprogramService;
 import com.Tomcat_Test.service.impl.FindprogramServiceImpl;
 
 /**
  * Servlet implementation class Findprogram
  */
-@WebServlet("/Findprogram")
+@WebServlet("/FindprogramSvl")
 public class FindprogramSvl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -34,20 +35,27 @@ public class FindprogramSvl extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		FindprogramService srevice=new FindprogramServiceImpl();
 		
+		int MyuserId = ((UserEntity)request.getSession().getAttribute("user")).getUserNum();
+		
+		ArrayList<programEntity> programEntities=srevice.findAllprogram(MyuserId);
+		
+		
+		
+		System.out.println(programEntities);
+		
+		request.setAttribute("programEntities", programEntities);
+		
+		
+		request.getRequestDispatcher("my.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		FindprogramService srevice=new FindprogramServiceImpl();
-		
-		ArrayList<programEntity> programEntities=srevice.findAllprogram();
-		
-		request.setAttribute("programEntities", programEntities);
-		
-		request.getRequestDispatcher("TestWelcome.jsp").forward(request, response);;
+
 		
 		doGet(request, response);
 	}

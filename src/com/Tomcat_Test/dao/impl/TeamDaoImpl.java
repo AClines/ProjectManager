@@ -11,17 +11,18 @@ import cmo.Tomcat_Test.utils.DBUtils;
 public class TeamDaoImpl extends DBUtils implements TeamDao{
 
 	@Override
-	public boolean sumbit(String teaminformation) throws Exception {
+	public boolean sumbit(String teaminformation,int projectId,int userId) throws Exception {
 		if(this.isSumbit(teaminformation)) {
 			openConnection();
 			// 写sql
-			String sql = "insert into team(teamName) values(?)";
+			String sql = "insert into task(taskName,programNum,userNum) values(?,?,?)";
 
 			// 创建执行sql的语句Statement,如果sql有占位符，调用setXXX方法
 			PreparedStatement pst = conn.prepareStatement(sql);
 			
 			pst.setString(1, teaminformation);
-			
+			pst.setInt(2, projectId);
+			pst.setInt(3, userId);
 			
 			int line = pst.executeUpdate();
 			closeConnection();
