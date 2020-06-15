@@ -27,8 +27,8 @@ public class LoginSvl extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		//1.接受页面参数
-		int userAccount = Integer.parseInt(request.getParameter("userAccount"));//该方法参数里放的是html页面input里的元素的名字
-		String userPassword = request.getParameter("userPassword");//该方法参数里放的是html页面input里的元素的名字
+		int userAccount = Integer.parseInt(request.getParameter("user"));//该方法参数里放的是html页面input里的元素的名字
+		String userPassword = request.getParameter("pass");//该方法参数里放的是html页面input里的元素的名字
 		System.out.println(userAccount+"  "+userPassword);
 		//2.创建对象，调用方法
 		IUserService userService = new UserServiceImpl();
@@ -50,7 +50,7 @@ public class LoginSvl extends HttpServlet {
 		}
 		else {
 			//登录失败，继续在登录页面
-			url="TestLogin.jsp";
+			url="LoginAndSignUp.jsp";
 			msg="用户名或者密码错误";
 		}
 		

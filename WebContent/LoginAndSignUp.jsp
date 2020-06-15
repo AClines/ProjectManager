@@ -20,14 +20,15 @@
 				<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登录</label>
 				<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">注册</label>
 				<div class="login-form">
+				<form action="${pageContext.request.contextPath}/LoginSvl" method="post">	
 					<div class="sign-in-htm">
 						<div class="group">
 							<label for="user" class="label">用户名</label>
-							<input id="user" type="text" class="input">
+							<input name="user" type="text" class="input">
 						</div>
 						<div class="group">
 							<label for="pass" class="label">密     码</label>
-							<input id="pass" type="password" class="input" data-type="password">
+							<input name="pass" type="password" class="input" data-type="password">
 						</div>
 						<div class="group">
 							<input id="check" type="checkbox" class="check" checked>
@@ -41,30 +42,26 @@
 							<a href="#forgot"></a>
 						</div>
 					</div>
+					</form>
 					<div class="sign-up-htm">
+					<form action="${pageContext.request.contextPath}/EnrollSvl" method="post">
 						<div class="group">
 							<label for="user" class="label">用户名</label>
-							<input id="user" type="text" class="input">
+							<input name="user" type="text" class="input">
 						</div>
 						<div class="group">
 							<label for="pass" class="label">密   码</label>
-							<input id="pass" type="password" class="input" data-type="password">
+							<input name="pass" type="password" class="input" data-type="password">
 						</div>
-						<div class="group">
-							<label for="pass" class="label">确认密码</label>
-							<input id="pass" type="password" class="input" data-type="password">
-						</div>
-						<div class="group">
-							<label for="pass" class="label">邮  箱</label>
-							<input id="pass" type="text" class="input">
-						</div>
+				
 						<div class="group">
 							<input type="submit" class="button" value="马上注册">
 						</div>
 						<div class="hr"></div>
 						<div class="foot-lnk">
-							<label for="tab-1"></a>
+							<label for="tab-1"></label>
 						</div>
+						</form>
 					</div>
 				</div>
 			</div>

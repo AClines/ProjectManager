@@ -27,7 +27,6 @@ public class UserDaoImpl extends DBUtils implements IUserDao {
 		pst.setInt(1, userAccount); // 序号对应占位符的顺序
 		pst.setString(2, userPassword);
 		ResultSet rs = pst.executeQuery();
-		
 		while (rs.next()) {
 			user = new UserEntity();// 创建用户实体对象，用来接收数据库查询出来的数据
 			user.setUserNum(rs.getInt("userNum"));

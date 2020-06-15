@@ -15,7 +15,7 @@ public class DBUtils {
 			Class.forName("com.mysql.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/program_manage"; // 数据库地址
 		    String uName = "root"; // 数据库用户名
-		    String upassword = "rootroot"; // 数据库密码
+		    String upassword = "151122"; // 数据库密码
 		    
 		    // 2.建立数据库连接Connection
 		    conn = DriverManager.getConnection(url, uName, upassword);

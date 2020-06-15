@@ -24,18 +24,18 @@ public class EnrollSvl extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 1.接收页面参数
-				int userAccount = Integer.parseInt(request.getParameter("userAccount"));// 用户编号
-				String userPassword = request.getParameter("userPassword");// 提交名称
-				String userName=request.getParameter("userName");
+				int userAccount = Integer.parseInt(request.getParameter("user"));// 用户编号
+				String userPassword = request.getParameter("pass");// 提交名称
+				String userName=request.getParameter("user");
 				IEnrollServiceImpl service=new IEnrollServiceImpl();
 				boolean flag = service.enroll(userAccount, userPassword, userName);
 				String url = "";
 				String msg = "";
 				if (flag) {
-					url = "TestWelcome.jsp";// 登录成功后跳转的地址;
+					url = "LoginAndSignUp.jsp";// 登录成功后跳转的地址;
 					msg = "注册成功";// 要显示的信息
 				} else {
-					url = "TestCommit.jsp";
+					url = "LoginAndSignUp.jsp";
 					msg = "注册失败";
 				}
 
